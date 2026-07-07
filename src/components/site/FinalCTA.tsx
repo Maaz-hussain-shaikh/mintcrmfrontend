@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Download } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 export function FinalCTA() {
@@ -24,6 +24,13 @@ export function FinalCTA() {
             className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             <MessageCircle className="h-4 w-4" /> Talk to us on WhatsApp
+          </a>
+          <a
+            href="/Mint-CRM-Sales-Presentation.pdf"
+            download
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+          >
+            <Download className="h-4 w-4" /> Download Presentation
           </a>
         </div>
       </Reveal>

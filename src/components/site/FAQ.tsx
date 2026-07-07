@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 const FAQS = [
   {
     q: "What is Mint CRM?",
-    a: "Mint CRM is a lead management and sales automation platform built for sales-driven teams. It centralizes every lead, auto-assigns it to the right agent, schedules follow-ups, syncs callbacks to Google Calendar, lets you message leads on WhatsApp, and shows founders real-time conversion analytics.",
+    a: "Mint CRM is a lead management and sales automation platform built for sales-driven teams. It centralizes every lead, auto-assigns it to the right agent, schedules follow-ups, adds hot leads to Google Calendar, lets you message leads on WhatsApp, and shows founders real-time conversion analytics.",
   },
   {
     q: "How does lead assignment work?",
@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: "What happens if I exceed my agent limit?",
-    a: "Each plan includes a set number of agents. If you grow beyond your plan, simply upgrade — or if you need more than 10 agents, contact us for custom enterprise pricing.",
+    a: "Each plan includes a set number of agents — 3 on Starter, 5 on Growth, and unlimited on Pro. If you grow, simply upgrade your plan, or contact us for a custom enterprise setup.",
   },
   {
     q: "Is my data secure?",

@@ -5,12 +5,13 @@ import { Menu, X } from "lucide-react";
 const LINKS = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Roadmap", href: "#roadmap" },
+  { label: "Refer & Earn", href: "#referral" },
   { label: "How it Works", href: "#how-it-works" },
-  { label: "About", href: "#who-for" },
   { label: "Contact", href: "#demo" },
 ];
 
-const SECTION_IDS = ["features", "pricing", "how-it-works", "who-for", "demo"];
+const SECTION_IDS = ["features", "pricing", "roadmap", "referral", "how-it-works", "demo"];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

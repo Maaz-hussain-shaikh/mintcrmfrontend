@@ -1,4 +1,4 @@
-import { ArrowRight, Plus, Search, Phone, MessageCircle } from "lucide-react";
+import { ArrowRight, Plus, Search, Phone, MessageCircle, Download } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const LEADS = [
@@ -141,6 +141,13 @@ export function Hero() {
               See Pricing
             </a>
           </div>
+          <a
+            href="/Mint-CRM-Sales-Presentation.pdf"
+            download
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
+          >
+            <Download className="h-4 w-4" /> Why You Need This CRM (PDF)
+          </a>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <span className="font-medium text-foreground">Built for fast-growing sales teams</span>
             <span className="hidden h-4 w-px bg-border sm:block" />

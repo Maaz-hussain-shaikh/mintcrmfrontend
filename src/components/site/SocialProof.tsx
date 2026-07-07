@@ -17,7 +17,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "The agent leaderboard changed everything. I can see exactly who's performing and where leads drop off. No more guessing, no more lost deals.",
+      "The agent performance metrics changed everything. I can see exactly who's converting and where leads drop off. No more guessing, no more lost deals.",
     name: "Sneha Iyer",
     role: "Sales Head",
     company: "Prime Realty Group",

@@ -6,6 +6,8 @@ import { Features } from "@/components/site/Features";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { WhoFor } from "@/components/site/WhoFor";
 import { Pricing } from "@/components/site/Pricing";
+import { UpcomingFeatures } from "@/components/site/UpcomingFeatures";
+import { ReferralProgram } from "@/components/site/ReferralProgram";
 import { SocialProof } from "@/components/site/SocialProof";
 import { FAQ } from "@/components/site/FAQ";
 import { FinalCTA } from "@/components/site/FinalCTA";
@@ -24,6 +26,8 @@ export default function Index() {
         <HowItWorks />
         <WhoFor />
         <Pricing />
+        <UpcomingFeatures />
+        <ReferralProgram />
         <SocialProof />
         <FAQ />
         <FinalCTA />

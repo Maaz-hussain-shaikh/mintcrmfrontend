@@ -8,7 +8,7 @@ const ROWS = [
   },
   {
     without: "Missed follow-ups and forgotten callbacks",
-    with: "Automatic reminders + Google Calendar sync keep you on time",
+    with: "Automatic reminders + hot-lead Google Calendar alerts keep you on time",
   },
   {
     without: "No idea which agent is actually performing",

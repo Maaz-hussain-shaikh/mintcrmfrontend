@@ -1,62 +1,71 @@
 import { Check, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const PLANS = [
+type Feature = { label: string; highlight?: boolean };
+
+const PLANS: {
+  name: string;
+  monthly: string;
+  yearly: string;
+  agents: string;
+  popular: boolean;
+  inheritsLabel: string | null;
+  highlightNote?: string;
+  features: Feature[];
+}[] = [
   {
     name: "Starter",
     monthly: "1,000",
     yearly: "12,000",
-    agents: "2 Agents",
+    agents: "3 Agents",
     popular: false,
-    inheritsLabel: null as string | null,
+    inheritsLabel: null,
     features: [
-      "Lead Management Dashboard",
-      "CSV Bulk Lead Import",
-      "Manual Agent Assignment",
-      "Lead Status Tracking",
-      "Task Assignment",
-      "Followup/Callback Scheduling",
-      "Lead Notes & History",
-      "Admin + Agent Roles",
+      { label: "Lead Management Dashboard" },
+      { label: "CSV Bulk Lead Import" },
+      { label: "Manual Agent Assignment" },
+      { label: "Lead Status Tracking" },
+      { label: "WhatsApp Messaging" },
+      { label: "Followup & Callback Scheduling" },
+      { label: "Hot-lead Google Calendar Reminder" },
+      { label: "Lead Categories & Duplicate Detection" },
+      { label: "Task Assignment" },
+      { label: "Lead Notes & History" },
+      { label: "Admin + Agent Roles" },
     ],
   },
   {
     name: "Growth",
-    monthly: "1,300",
-    yearly: "15,600",
+    monthly: "1,399",
+    yearly: "16,788",
     agents: "5 Agents",
     popular: true,
     inheritsLabel: "Everything in Starter, plus:",
+    highlightNote: "⚡ Best value for growing sales teams",
     features: [
-      "Automated Lead Distribution",
-      "Google Calendar Sync",
-      "WhatsApp Direct Messaging",
-      "Agent-wise Tracking",
-      "Followup Reminders",
-      "Lead Source Tagging",
-      "Duplicate Lead Detection",
-      "Custom Lead Status Stages",
+      { label: "Automated Lead Distribution (Round-robin)", highlight: true },
+      { label: "Auto CSV Distribution to Agents", highlight: true },
+      { label: "Smart WhatsApp Message Templates", highlight: true },
+      { label: "Real-time Push Notifications", highlight: true },
+      { label: "Attendance (Present / Absent / Leave)", highlight: true },
+      { label: "Agent Performance Metrics", highlight: true },
     ],
   },
   {
     name: "Pro",
     monthly: "1,799",
     yearly: "21,588",
-    agents: "10 Agents",
+    agents: "Unlimited Agents",
     popular: false,
     inheritsLabel: "Everything in Growth, plus:",
     features: [
-      "Advanced Analytics & Reports",
-      "Priority Lead Distribution",
-      "Multi-level Task Tracking",
-      "Onboarding Support",
-      "Priority Support",
-      "Agent Performance Leaderboard",
-      "Conversion Funnel Reports",
-      "Custom Roles & Permissions",
-      "Data Export (Excel/CSV)",
-      "API Access for Integrations",
-      "Dedicated Account Manager",
+      { label: "Auto Lead Intake API (Website / WhatsApp)" },
+      { label: "Multi-source Intake — Instagram + WhatsApp" },
+      { label: "Advanced Reports & Analytics" },
+      { label: "Data Export (Excel / CSV)" },
+      { label: "Complete Attendance Register + Work Settings" },
+      { label: "White-label Branding (Your Name & Logo)" },
+      { label: "Priority Support & Onboarding" },
     ],
   },
 ];
@@ -116,14 +125,29 @@ export function Pricing() {
                 Book a Free Demo <ArrowRight className="h-4 w-4" />
               </a>
 
-              {plan.inheritsLabel && (
-                <p className="mt-6 text-xs font-semibold text-primary">{plan.inheritsLabel}</p>
+              {plan.highlightNote && (
+                <p className="mt-6 rounded-xl bg-secondary px-3 py-2 text-center text-xs font-semibold text-primary">
+                  {plan.highlightNote}
+                </p>
               )}
-              <ul className={`space-y-3 ${plan.inheritsLabel ? "mt-3" : "mt-6"}`}>
+              {plan.inheritsLabel && (
+                <p className={`text-xs font-semibold text-primary ${plan.highlightNote ? "mt-3" : "mt-6"}`}>
+                  {plan.inheritsLabel}
+                </p>
+              )}
+              <ul className={`space-y-3 ${plan.inheritsLabel || plan.highlightNote ? "mt-3" : "mt-6"}`}>
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <span className="text-sm text-muted-foreground">{f}</span>
+                  <li key={f.label} className="flex items-start gap-2.5">
+                    <span
+                      className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${
+                        f.highlight ? "bg-primary text-primary-foreground" : "text-primary"
+                      }`}
+                    >
+                      <Check className="h-3 w-3" />
+                    </span>
+                    <span className={`text-sm ${f.highlight ? "font-semibold text-foreground" : "text-muted-foreground"}`}>
+                      {f.label}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -132,7 +156,7 @@ export function Pricing() {
         </div>
 
         <Reveal className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground">
-          All plans billed annually. Need more than 10 agents?{" "}
+          All plans billed annually. Need custom limits or a tailored setup?{" "}
           <a href="#demo" className="font-semibold text-primary underline-offset-2 hover:underline">
             Contact us for custom enterprise pricing.
           </a>

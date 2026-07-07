@@ -2,9 +2,9 @@ import { Inbox, UserCheck, PhoneCall, Trophy } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const STEPS = [
-  { icon: Inbox, title: "Capture", desc: "Leads flow in from forms, imports, ads, and WhatsApp into one inbox." },
+  { icon: Inbox, title: "Capture", desc: "Leads flow in from forms, imports, WhatsApp, and Instagram into one inbox." },
   { icon: UserCheck, title: "Assign", desc: "Auto-routed to the right agent the instant they arrive." },
-  { icon: PhoneCall, title: "Follow Up", desc: "Scheduled callbacks, reminders, and calendar sync keep momentum." },
+  { icon: PhoneCall, title: "Follow Up", desc: "Scheduled callbacks, reminders, and push notifications keep momentum." },
   { icon: Trophy, title: "Convert", desc: "Track every stage and close more deals, faster." },
 ];
 

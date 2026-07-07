@@ -5,7 +5,7 @@ const STEPS = [
   {
     icon: Inbox,
     title: "Capture every lead automatically",
-    desc: "Web forms, CSV bulk import, and ad integrations funnel every lead into one place the second it arrives.",
+    desc: "Web forms, CSV bulk import, and WhatsApp/Instagram intake funnel every lead into one place the second it arrives.",
   },
   {
     icon: Users,
@@ -15,7 +15,7 @@ const STEPS = [
   {
     icon: CalendarClock,
     title: "Never miss a follow-up",
-    desc: "Task scheduling, callback reminders, and Google Calendar sync make sure every touchpoint happens on time.",
+    desc: "Task scheduling, callback reminders, and hot-lead Google Calendar reminders make sure every touchpoint happens on time.",
   },
   {
     icon: MessageCircle,

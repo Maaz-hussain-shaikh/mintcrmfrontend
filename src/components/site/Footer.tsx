@@ -1,9 +1,10 @@
-import { Mail, Phone, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 
 const LINKS = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Roadmap", href: "#roadmap" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#demo" },
 ];
@@ -61,9 +62,7 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" /> hello@mintcrm.app
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary" /> +91 8989335129
-              </li>
+              
             </ul>
           </div>
         </div>
